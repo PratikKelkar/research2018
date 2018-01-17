@@ -46,9 +46,9 @@ for word1 in range(63):
             testy[ptr] = 1
             ptr+=1
 
-        save_trainx[(cat1,cat2)] = trainx
-        save_trainy[(cat1,cat2)] = trainy
-        save_testx[(cat1,cat2)] = testx
-        save_testy[(cat1,cat2)] = testy
+        save_trainx[(word1,word2)] = trainx
+        save_trainy[(word1,word2)] = trainy
+        save_testx[(word1,word2)] = testx
+        save_testy[(word1,word2)] = testy
 
 pickle.dump( (save_trainx, save_trainy, save_testx, save_testy), open("WordXWord.p","wb"))
