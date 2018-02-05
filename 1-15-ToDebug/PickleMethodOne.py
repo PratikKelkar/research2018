@@ -68,7 +68,7 @@ fixedc = int(tWidth/tEx)
 ptrr = 0
 for t in range(tStart, tEnd-tWidth+1, tIncr):
     ptrppp = 0
-    for tEStart in range(t,t+tWidth-tEx+1,tEx):
+    for tEStart in range(t,t+tWidth-fixedc+1,fixedc):
         timeSequences[:,:,ptrr,:,:,ptrppp] = np.average(TrainingData[:,:,:,:,tEStart:tEStart+fixedc], axis = 4)
         ptrppp+=1
     ptrr+=1
